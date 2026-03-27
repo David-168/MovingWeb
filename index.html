@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>gsplat.js - Viewer Demo</title>
+        <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh@0.4/face_mesh.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils@0.3/camera_utils.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+<style> body {margin: 0;} </style>
+
+<script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdnjs.cloudflare.com/ajax/libs/three.js/0.178.0/three.module.js",
+      "@sparkjsdev/spark": "https://sparkjs.dev/releases/spark/0.1.10/spark.module.js"
+    }
+  }
+</script>
+        <video class="input_video"  style="display: none;" ></video>
+ <!--       <canvas id="canvas"></canvas>
+-->
+
+<div id="splat"
+     data-config='{
+       "scene": "snicker.ply",
+       "position": [0, 0, 0.1],
+       "scale": [0.5, 0.5, 0.5],
+       "rotation": [180, 0, 0],
+       "backgroundColor": "#000000"
+     }'>
+</div>
+<script>
+  const splatURL = "model.ply";
+</script>
+  <style>
+    #progress-container {
+      width: 80%;
+      height: 20px;
+      background: #eee;
+      margin: 20px auto;
+    }
+
+    #progress-bar {
+      width: 0%;
+      height: 100%;
+      background: green;
+    }
+
+    #progress-text {
+      text-align: center;
+    }
+  </style>
+  <div id="progress-container">
+  <div id="progress-bar"></div>
+  <div id="progress-text">0%</div>
+</div>
+<!-- <p id="progress-text">0%</p> -->
+<script src="https://david-168.github.io/ZenLib/ZenLib.min.js" type="module"></script>
+        
+<script src="main.min.js" type="module"></script>
+
+    </body>
+
+
+
+</head>
+</html>
